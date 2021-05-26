@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=simple.js></script>
+    <title>CANVAS</title>
+    <div style="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvideoplasty.com%2Fmotion-graphics%2Fendless-hospital-corridor-5163&psig=AOvVaw0bRZ3Ykb5xg_UhL1uDmIHz&ust=1621325708660000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjPgYyj0PACFQAAAAAdAAAAABAy">
+        
+</head>
+<body>
+    <script src="https://koda.nu/simple.js">
+
+        var Zombies = [];
+
+        var i = 0;
+
+        while (i < 10)
+        {
+            Zombies.push({
+            x: random(totalWidth),
+            y: random(totalHeight),
+            speed: random(5,10)
+        });
+        i += 1  
+        }
+
+        Zombies.push();
+
+        var zombie = ({
+            x: random(totalWidth),
+            y: random(totalHeight),
+            speed: random(1,5)
+        });
+        function update()
+        {
+            clearScreen;
+
+            var i = 0;
+
+            while (i < 1)
+        {
+                var zombie = Zombies[i];
+           
+
+            picture(zombie.x, zombie.y, "https://www.pxpng.com/public/uploads/small/11601982262w2na19g5v9v3okueu8ar9kstwfrmfgxfj6iplnbqjgj9tycihfno9vh3fhmu6m1vktsidic0em3exeufp3jpk6l8hncrr7xnpvmg.png")
+            
+            if (zombie.y < mouse.y)
+                zombie.y += zombie.speed;
+            else
+                zombie.y -= zombie.speed; 
+            
+            if (zombie.x < mouse.x)
+
+                zombie.x += zombie.speed;
+            else
+                zombie.x -= zombie.speed; 
+
+            if (distance(mouse, zombie) < 1)
+            {
+                alert("Gameover");
+                stopUpdate();
+            }
+        }
+        }
+        
+</script>
+
+</body>
+</html>
